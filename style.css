@@ -1,0 +1,213 @@
+:root {
+    --bg-color: #e9e6dd; /* Světlá krémová jako na obrázku */
+    --button-bg: #fdfaf7; /* Off-white pro tlačítka */
+    --text-color: #1a1a1a;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-sans);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 580px; /* Šířka vhodná pro mobil i desktop */
+    text-align: center;
+}
+
+/* Profil */
+.profile-pic img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+/* Ikony sociálních sítí */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Karty odkazů */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link-card {
+    background-color: var(--button-bg);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 40px; /* Hodně zaoblené rohy */
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.link-card:hover {
+    transform: scale(1.02);
+}
+
+.thumb {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link-card span {
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.dots {
+    color: #999;
+    font-size: 1.2rem;
+}
+
+/* Spodní tlačítko */
+/* Podpis v patičce */
+.footer-btn {
+    margin-top: 50px;
+    opacity: 0.6; /* Jemnější barva */
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Úprava pro Instagram ikonku, aby nebyla obří */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Mezera mezi Instagramem a telefonem */
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 32px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Jemné zvětšení při najetí */
+}
+.footer-btn button {
+    background-color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+/* Styly pro Ceník */
+.cenik-page {
+    padding-top: 20px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.price-section {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.price-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    border-bottom: 1px solid #d1ccc0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #634a3a;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Tečkovaná čára mezi názvem a cenou */
+.price-item::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px dotted #ccc;
+    margin: 0 10px;
+    order: 2;
+}
+
+.price-item span:first-child { order: 1; }
+.price-item span:last-child { order: 3; font-weight: 500; }
+
+.price-item.highlight {
+    font-weight: 700;
+    color: #8c7365;
+}
+
+.price-item.highlight span:last-child{
+    font-weight: 700;
+}
+
+.price-note {
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 5px;
+}
