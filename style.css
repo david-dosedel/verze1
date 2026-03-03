@@ -1,9 +1,11 @@
+/* --- ZÁKLADNÍ NASTAVENÍ A PROMĚNNÉ --- */
 :root {
-    --bg-color: #e9e6dd; /* Světlá krémová jako na obrázku */
+    --bg-color: #e9e6dd; /* Světlá krémová */
     --button-bg: #fdfaf7; /* Off-white pro tlačítka */
     --text-color: #1a1a1a;
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
+    --accent-color: #8c7365; /* Hnědý akcent pro ceník */
 }
 
 * {
@@ -23,11 +25,11 @@ body {
 
 .container {
     width: 100%;
-    max-width: 580px; /* Šířka vhodná pro mobil i desktop */
+    max-width: 580px;
     text-align: center;
 }
 
-/* Profil */
+/* --- PROFIL (HLAVNÍ STRÁNKA) --- */
 .profile-pic img {
     width: 120px;
     height: 120px;
@@ -47,21 +49,26 @@ h1 {
     margin-bottom: 25px;
 }
 
-/* Ikony sociálních sítí */
+/* --- IKONY SOCIÁLNÍCH SÍTÍ --- */
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    font-size: 1.8rem;
+    gap: 30px;
     margin-bottom: 40px;
 }
 
 .social-icons a {
     text-decoration: none;
     color: var(--text-color);
+    font-size: 32px;
+    transition: transform 0.2s ease;
 }
 
-/* Karty odkazů */
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* --- KARTY ODKAZŮ (INDEX) --- */
 .links {
     display: flex;
     flex-direction: column;
@@ -75,7 +82,7 @@ h1 {
     display: flex;
     align-items: center;
     padding: 12px 20px;
-    border-radius: 40px; /* Hodně zaoblené rohy */
+    border-radius: 40px;
     transition: transform 0.2s ease;
     position: relative;
 }
@@ -111,48 +118,82 @@ h1 {
     font-size: 1.2rem;
 }
 
-/* Spodní tlačítko */
-/* Podpis v patičce */
-.footer-btn {
-    margin-top: 50px;
-    opacity: 0.6; /* Jemnější barva */
-    font-size: 0.8rem;
+/* --- SEKCE SLUŽBY (GRID STYL) --- */
+/* --- SEKCE SLUŽBY (GRID STYL - 3 SLOUPCE) --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobil: 1 sloupec */
+    gap: 15px; /* Mírně menší mezera, aby se 3 vešly lépe */
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Tablet: 2 sloupce */
+@media (min-width: 600px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 sloupce */
+@media (min-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Na desktopu můžeme i mírně zvětšit max-width kontejneru, 
+       aby dlaždice nebyly příliš úzké */
+    .container {
+        max-width: 900px; 
+    }
+}
+
+.service-item {
+    position: relative;
+    height: 350px; /* Můžeš zmenšit na 300px, pokud jsou karty moc vysoké */
+    border-radius: 25px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.service-item:hover img {
+    transform: scale(1.1);
+}
+
+.service-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26, 26, 26, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.service-name {
+    color: var(--button-bg);
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
     letter-spacing: 1px;
     text-transform: uppercase;
+    border-bottom: 1px solid rgba(253, 250, 247, 0.4);
+    padding-bottom: 5px;
 }
 
-/* Úprava pro Instagram ikonku, aby nebyla obří */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Mezera mezi Instagramem a telefonem */
-    margin-bottom: 40px;
-}
-
-.social-icons a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-size: 32px;
-    transition: transform 0.2s ease;
-}
-
-.social-icons a:hover {
-    transform: scale(1.1); /* Jemné zvětšení při najetí */
-}
-.footer-btn button {
-    background-color: white;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 30px;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    cursor: pointer;
-}
-/* Styly pro Ceník */
-.cenik-page {
-    padding-top: 20px;
-}
-
+/* --- STYLY PRO CENÍK --- */
 .back-btn {
     text-decoration: none;
     color: var(--text-color);
@@ -184,7 +225,6 @@ h1 {
     font-size: 0.95rem;
 }
 
-/* Tečkovaná čára mezi názvem a cenou */
 .price-item::after {
     content: "";
     flex: 1;
@@ -198,11 +238,7 @@ h1 {
 
 .price-item.highlight {
     font-weight: 700;
-    color: #8c7365;
-}
-
-.price-item.highlight span:last-child{
-    font-weight: 700;
+    color: var(--accent-color);
 }
 
 .price-note {
@@ -210,4 +246,14 @@ h1 {
     font-style: italic;
     opacity: 0.8;
     margin-top: 5px;
+}
+
+/* --- PATIČKA --- */
+.footer-btn {
+    margin-top: 50px;
+    opacity: 0.6;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
 }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úprava řas | GlowUp Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .service-detail-content {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        /* Hlavní kontejner pro jednu službu */
+        .service-package {
+            background-color: var(--button-bg);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        /* Střídání obrázků (sudé vlevo, text vpravo) */
+        .service-package:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Část s textem */
+        .service-text {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-text h3 {
+            font-family: var(--font-serif);
+            color: #634a3a;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #d1ccc0;
+            padding-bottom: 8px;
+            font-size: 1.25rem;
+        }
+
+        .service-text p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4a4a4a;
+        }
+
+        /* Kontejner pro obrázek */
+        .service-img-container {
+            width: 40%;
+            position: relative;
+            min-height: 250px;
+        }
+
+        .service-img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Mobilní zobrazení */
+        @media (max-width: 650px) {
+            .service-package, 
+            .service-package:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+            .service-img-container {
+                width: 100%;
+                height: 220px;
+                min-height: auto;
+            }
+        }
+
+        .booking-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+        .booking-btn:hover { opacity: 0.8; }
+        
+        .highlight-text {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="cenik-page">
+    <div class="container">
+        <header class="profile">
+            <a href="sluzby.html" class="back-btn">← Zpět na služby</a>
+            <h1>Lash Lifting a úprava řas</h1>
+            <p class="subtitle">Natočení, prodloužení a hloubková výživa pro váš neodolatelný pohled.</p>
+        </header>
+
+        <div class="service-detail-content">
+            
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Barvení řas</span> <span>150 Kč</span></h3>
+                    <p>Zvýraznění vašich přírodních řas intenzivní barvou od kořínků až po konečky. Ideální volba pro klientky se světlými řasami, nebo jako perfektní doplněk ke kosmetickému ošetření.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_RASY_1.jpg" alt="Barvení řas">
+                </div>
+            </div>
+
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Lash Lifting (komplet)</span> <span>1200 Kč</span></h3>
+                    <p>Šetrná alternativa k prodlužování řas. Vaše přírodní řasy jsou natočeny od kořínků, čímž se opticky prodlouží a zahustí. Procedura zahrnuje i barvení a aplikaci výživného séra (botoxu), které řasy hydratuje a posiluje.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_RASY_2.jpg" alt="Lash Lifting kompletní péče">
+                </div>
+            </div>
+
+            <div class="service-package" style="border: 2px solid var(--accent-color);">
+                <div class="service-text">
+                    <h3 class="highlight-text"><span>Balíček: Laminace + Lash Lifting</span> <span>1500 Kč</span></h3>
+                    <p><strong>Doporučujeme!</strong> Kompletní proměna vašeho pohledu během jedné návštěvy. Postaráme se o dokonalý tvar vašeho obočí i natočení a výživu vašich řas za zvýhodněnou cenu.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_RASY_3.jpg" alt="Balíček Laminace obočí a Lash Lifting">
+                </div>
+            </div>
+
+        </div>
+
+        <a href="https://booking.reservanto.cz/Modal/?id=24615" class="booking-btn" target="_blank">Rezervovat termín</a>
+
+        <footer class="footer-btn">
+            <span>GlowUp Lab</span>
+        </footer>
+    </div>
+</body>
+</html>

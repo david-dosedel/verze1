@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Společenské účesy | GlowUp Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .service-detail-content {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        /* Hlavní kontejner pro jednu službu */
+        .service-package {
+            background-color: var(--button-bg);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        /* Střídání obrázků (sudé vlevo, text vpravo) */
+        .service-package:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Část s textem */
+        .service-text {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-text h3 {
+            font-family: var(--font-serif);
+            color: #634a3a;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #d1ccc0;
+            padding-bottom: 8px;
+            font-size: 1.25rem;
+        }
+
+        .service-text p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4a4a4a;
+        }
+
+        /* Kontejner pro obrázek */
+        .service-img-container {
+            width: 40%;
+            position: relative;
+            min-height: 250px;
+        }
+
+        .service-img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Mobilní zobrazení */
+        @media (max-width: 650px) {
+            .service-package, 
+            .service-package:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+            .service-img-container {
+                width: 100%;
+                height: 220px;
+                min-height: auto;
+            }
+        }
+
+        .booking-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+        .booking-btn:hover { opacity: 0.8; }
+
+        .wedding-note {
+            background-color: #f4f0e6;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 40px;
+            border: 1px dashed var(--accent-color);
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="cenik-page">
+    <div class="container">
+        <header class="profile">
+            <a href="sluzby.html" class="back-btn">← Zpět na služby</a>
+            <h1>Účesy a vlasový styling</h1>
+            <p class="subtitle">Dokonalý účes, který vydrží a podtrhne váš celkový vzhled.</p>
+        </header>
+
+        <div class="service-detail-content">
+            
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Kulmování a lehký styling</span> <span>od 800 Kč</span></h3>
+                    <p>Ideální pro focení, rande nebo menší společenské události. Vytvořím vám krásné plážové vlny, elegantní lokny nebo dokonale vyžehlené vlasy s objemem, které vám dodají šmrnc.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_UCESY_1.jpg" alt="Kulmování a vlny">
+                </div>
+            </div>
+
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Společenský výčes</span> <span>800–2000 Kč</span></h3>
+                    <p>Komplexní účes na ples, do divadla nebo na večírek. Cena se odvíjí od náročnosti, délky a hustoty vašich vlasů. Účes je důkladně zafixován profesionálními přípravky, aby vydržel perfektní celou noc.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_UCESY_2.jpg" alt="Společenský výčes">
+                </div>
+            </div>
+
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Svatební účes</span> <span>na dotaz</span></h3>
+                    <p>Účes pro váš nejkrásnější den. Společně na zkoušce vymyslíme design, který bude perfektně ladit k vašim šatům i tvaru obličeje, ať už toužíte po romantickém boho stylu, nebo elegantním drdolu.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_UCESY_3.jpg" alt="Svatební účes">
+                </div>
+            </div>
+
+            <div class="wedding-note">
+                <p><strong>Kompletní proměna:</strong> Využijte možnosti spojit tvorbu účesu se společenským či svatebním líčením v rámci jednoho termínu. Pro svatební balíčky mě prosím kontaktujte přímo.</p>
+            </div>
+
+        </div>
+
+        <a href="https://booking.reservanto.cz/Modal/?id=24615" class="booking-btn" target="_blank">Rezervovat termín</a>
+
+        <footer class="footer-btn">
+            <span>GlowUp Lab</span>
+        </footer>
+    </div>
+</body>
+</html>

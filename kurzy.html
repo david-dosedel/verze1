@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurzy sebelíčení | GlowUp Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .service-detail-content {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        /* Hlavní kontejner pro jeden kurz */
+        .service-package {
+            background-color: var(--button-bg);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        /* Střídání obrázků (sudé vlevo, text vpravo) */
+        .service-package:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Část s textem */
+        .service-text {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-text h3 {
+            font-family: var(--font-serif);
+            color: #634a3a;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #d1ccc0;
+            padding-bottom: 8px;
+            font-size: 1.25rem;
+        }
+
+        .service-text p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4a4a4a;
+        }
+
+        /* Kontejner pro obrázek */
+        .service-img-container {
+            width: 40%;
+            position: relative;
+            min-height: 250px;
+        }
+
+        .service-img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Mobilní zobrazení */
+        @media (max-width: 650px) {
+            .service-package, 
+            .service-package:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+            .service-img-container {
+                width: 100%;
+                height: 220px;
+                min-height: auto;
+            }
+        }
+
+        .booking-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+        .booking-btn:hover { opacity: 0.8; }
+
+        .info-note {
+            background-color: #f4f0e6;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 40px;
+            border: 1px dashed var(--accent-color);
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="cenik-page">
+    <div class="container">
+        <header class="profile">
+            <a href="sluzby.html" class="back-btn">← Zpět na služby</a>
+            <h1>Kurzy sebelíčení</h1>
+            <p class="subtitle">Naučte se triky profesionálů a objevte svou nejkrásnější verzi.</p>
+        </header>
+
+        <div class="service-detail-content">
+            
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Denní make-up a péče o pleť</span> <span>individuálně</span></h3>
+                    <p>Naučte se základy, které vám ušetří čas každé ráno. Během kurzu projdeme váš současný kosmetický kufřík, naučíme se správně připravit pleť, vybrat dokonalý odstín make-upu a vytvořit svěží, přirozený vzhled do práce či do školy.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_KURZ_1.jpg" alt="Denní make-up">
+                </div>
+            </div>
+
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Večerní a glam líčení</span> <span>individuálně</span></h3>
+                    <p>Chcete zazářit na plese nebo večírku? Tento kurz je zaměřen na výraznější techniky. Ukážeme si, jak na dokonalé kouřové stíny, precizní oční linky, konturování obličeje a jak dosáhnout toho, aby váš make-up vydržel celou noc.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_KURZ_2.jpg" alt="Večerní líčení">
+                </div>
+            </div>
+
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Kurz pro dvě kamarádky</span> <span>individuálně</span></h3>
+                    <p>Spojte příjemné s užitečným a užijte si dámskou jízdu! Přijďte s kamarádkou, maminkou nebo dcerou. Společně se naučíte, jak se líčit, vyzkoušíte si nové produkty a odnesete si nejen nové dovednosti, ale i skvělý zážitek.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_KURZ_3.jpg" alt="Kurz pro kamarádky">
+                </div>
+            </div>
+
+            <div class="info-note">
+                <p><strong>Cena a obsah na míru:</strong> Protože každá z nás má jiné potřeby a zkušenosti, obsah i cena kurzu se tvoří <strong>zcela individuálně</strong>. Ozvěte se mi a domluvíme se na formátu, který vám bude nejvíce vyhovovat.</p>
+            </div>
+
+        </div>
+
+        <a href="https://booking.reservanto.cz/Modal/?id=24615" class="booking-btn" target="_blank">Poptat kurz</a>
+
+        <footer class="footer-btn">
+            <span>GlowUp Lab</span>
+        </footer>
+    </div>
+</body>
+</html>

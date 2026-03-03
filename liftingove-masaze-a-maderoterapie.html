@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liftingové masáže a maderoterapie | GlowUp Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .service-detail-content {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        /* Hlavní kontejner pro jednu službu */
+        .service-package {
+            background-color: var(--button-bg);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        /* Střídání obrázků (sudé vlevo, text vpravo) */
+        .service-package:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Část s textem */
+        .service-text {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-text h3 {
+            font-family: var(--font-serif);
+            color: #634a3a;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #d1ccc0;
+            padding-bottom: 8px;
+            font-size: 1.25rem;
+        }
+
+        .service-text p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4a4a4a;
+        }
+
+        /* Kontejner pro obrázek */
+        .service-img-container {
+            width: 40%;
+            position: relative;
+            min-height: 250px;
+        }
+
+        .service-img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Mobilní zobrazení */
+        @media (max-width: 650px) {
+            .service-package, 
+            .service-package:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+            .service-img-container {
+                width: 100%;
+                height: 220px;
+                min-height: auto;
+            }
+        }
+
+        .booking-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+        .booking-btn:hover { opacity: 0.8; }
+    </style>
+</head>
+<body class="cenik-page">
+    <div class="container">
+        <header class="profile">
+            <a href="sluzby.html" class="back-btn">← Zpět na služby</a>
+            <h1>Liftingové masáže a maderoterapie</h1>
+            <p class="subtitle">Přirozené omlazení, redukce vrásek a hluboká relaxace pro vaši tvář.</p>
+        </header>
+
+        <div class="service-detail-content">
+            
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Manuální lifting obličeje</span> <span>850 Kč</span></h3>
+                    <p><strong>Délka: 45 minut</strong><br>
+                    Intenzivní a velmi příjemná masážní technika, která uvolňuje napětí ve svalech, stimuluje krevní oběh a prokazatelně vyhlazuje drobné vrásky. Vaše pleť bude okamžitě projasněná a vypnutá.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_MASAZ_1.jpg" alt="Liftingová masáž obličeje">
+                </div>
+            </div>
+
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>Maderoterapie obličeje</span> <span>950 Kč</span></h3>
+                    <p><strong>Délka: 45 minut</strong><br>
+                    Unikátní masáž pomocí speciálních dřevěných válečků. Dokonale rozproudí lymfu, zbaví obličej otoků (např. váčků pod očima) a krásně vyrýsuje kontury obličeje, včetně odstranění dvojité brady.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_MASAZ_2.jpg" alt="Maderoterapie obličeje">
+                </div>
+            </div>
+
+            <div class="service-package">
+                <div class="service-text">
+                    <h3><span>VIP Balíček: Lifting + Madero</span> <span>1600 Kč</span></h3>
+                    <p><strong>Délka: 90 minut</strong><br>
+                    Ultimátní anti-aging péče. Spojení manuálních liftingových hmatů a dřevěných válečků přináší nejlepší možné výsledky v přirozeném omlazení obličeje, krku a dekoltu.</p>
+                </div>
+                <div class="service-img-container">
+                    <img src="TVUJ_OBRAZEK_MASAZ_3.jpg" alt="Kombinace Lifting a Maderoterapie">
+                </div>
+            </div>
+
+            <p class="price-note" style="text-align: center; margin-top: 30px;">
+                * Ceny a délky procedur jsou pouze orientační (přepiš si je dle svého reálného ceníku).
+            </p>
+
+        </div>
+
+        <a href="https://booking.reservanto.cz/Modal/?id=24615" class="booking-btn" target="_blank">Rezervovat termín</a>
+
+        <footer class="footer-btn">
+            <span>GlowUp Lab</span>
+        </footer>
+    </div>
+</body>
+</html>
