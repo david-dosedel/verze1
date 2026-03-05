@@ -95,6 +95,11 @@
             transition: opacity 0.3s;
         }
         .booking-btn:hover { opacity: 0.8; }
+        
+        /* Odsazení pro vygenerovaná tlačítka Reservanto */
+        .reservanto-widget {
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body class="cenik-page">
@@ -112,6 +117,8 @@
                     <h3><span>Kosmetika Deluxe</span> <span>1500 Kč</span></h3>
                     <p><strong>Délka: 90 minut</strong><br>
                     Hloubkové čištění s relaxační masáží obličeje a dekoltu, maska a závěrečná péče.</p>
+                    
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113636"></div>
                 </div>
                 <div class="service-img-container">
                     <img src="TVUJ_OBRAZEK_1.jpg" alt="Kosmetika Deluxe">
@@ -122,6 +129,8 @@
                 <div class="service-text">
                     <h3><span>Kosmetika Princess</span> <span>1750 Kč</span></h3>
                     <p>Rozšířená péče se zapracováním aktivních sér a speciální alginátovou maskou pro rozjasnění.</p>
+                        
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113637"></div>
                 </div>
                 <div class="service-img-container">
                     <img src="TVUJ_OBRAZEK_2.jpg" alt="Kosmetika Princess">
@@ -132,6 +141,8 @@
                 <div class="service-text">
                     <h3><span>Kosmetika Queen</span> <span>1850 Kč</span></h3>
                     <p>VIP péče s anti-aging procedurami a prodlouženou liftingovou masáží pro dokonalý relax.</p>
+                    
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113638"></div>
                 </div>
                 <div class="service-img-container">
                     <img src="TVUJ_OBRAZEK_3.jpg" alt="Kosmetika Queen">
@@ -143,6 +154,8 @@
                     <h3><span>Kosmetika Student</span> <span>1000 Kč</span></h3>
                     <p><strong>Délka: 60 minut</strong><br>
                     Rychlé a efektivní hloubkové čištění přizpůsobené mladé a problematické pleti.</p>
+                    
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113639"></div>
                 </div>
                 <div class="service-img-container">
                     <img src="TVUJ_OBRAZEK_4.jpg" alt="Kosmetika Student">
@@ -155,11 +168,11 @@
 
         </div>
 
-        <a href="https://booking.reservanto.cz/Modal/?id=24615" class="booking-btn" target="_blank">Rezervovat termín</a>
-
         <footer class="footer-btn">
             <span>GlowUp Lab</span>
         </footer>
     </div>
+
+    <script defer id="reservanto-widget-script" type="text/javascript" src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
 </body>
 </html>
