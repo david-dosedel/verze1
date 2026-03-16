@@ -91,17 +91,24 @@
             text-decoration: none;
             font-weight: 500;
             margin-top: 20px;
+            margin-bottom: 30px;
             transition: opacity 0.3s;
         }
         .booking-btn:hover { opacity: 0.8; }
 
+        .reservanto-widget {
+            margin-top: 15px;
+        }
+
         .wedding-note {
-            background-color: #f4f0e6;
-            padding: 20px;
-            border-radius: 15px;
+            background-color: var(--button-bg); /* Použití vaší proměnné pro barvu pozadí */
+            padding: 25px;
+            border-radius: 20px;
             margin-top: 40px;
-            border: 1px dashed var(--accent-color);
+            margin-bottom: 20px;
+            border: 1px dashed #d1ccc0;
             text-align: center;
+            color: #4a4a4a;
         }
     </style>
 </head>
@@ -119,9 +126,11 @@
                 <div class="service-text">
                     <h3><span>Společenský make-up</span> <span>1500–2000 Kč</span></h3>
                     <p>Líčení na ples, večírek, oslavu nebo rodinné focení. Používám profesionální a dlouhotrvající produkty, které vydrží v perfektním stavu po celou noc. Součástí je i aplikace trsů řas pro zvýraznění pohledu.</p>
+
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="114085"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_LICENI_1.jpg" alt="Společenský make-up">
+                    <img src="/pictures/liceni_nahled.jpg" alt="Společenský make-up">
                 </div>
             </div>
 
@@ -131,7 +140,7 @@
                     <p>Líčení nevěsty, které musí být dokonalé naživo i na fotografii. Balíček obvykle obsahuje zkoušku líčení, poradenství v péči o pleť před svatbou a líčení v den D u mě v salonu nebo u vás na místě.</p>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_LICENI_2.jpg" alt="Svatební líčení">
+                    <img src="/pictures/svatebni.jpg" alt="Svatební líčení">
                 </div>
             </div>
 
@@ -141,7 +150,7 @@
                     <p>Naučte se líčit jako profesionál. Během individuálního kurzu projdeme váš kosmetický kufřík, vybereme ideální odstíny pro váš typ a naučím vás techniky, které vám ráno ušetří čas a dodají sebevědomí.</p>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_LICENI_3.jpg" alt="Kurz sebelíčení">
+                    <img src="/pictures/kurzy_1.jpg" alt="Kurz sebelíčení">
                 </div>
             </div>
 
@@ -150,12 +159,11 @@
             </div>
 
         </div>
-
-        <a href="https://booking.reservanto.cz/Modal/?id=24615" class="booking-btn" target="_blank">Rezervovat termín</a>
-
         <footer class="footer-btn">
             <span>GlowUp Lab</span>
         </footer>
     </div>
+
+    <script defer id="reservanto-widget-script" type="text/javascript" src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
 </body>
 </html>

@@ -82,21 +82,13 @@
             }
         }
 
-        .booking-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 20px;
-            transition: opacity 0.3s;
+        /* Odsazení pro vygenerovaná tlačítka Reservanto */
+        .reservanto-widget {
+            margin-top: 15px;
         }
-        .booking-btn:hover { opacity: 0.8; }
-        
+
         .highlight-text {
-            color: var(--accent-color);
+            color: #634a3a; /* Sjednoceno s ostatními nadpisy */
             font-weight: 600;
         }
     </style>
@@ -115,9 +107,11 @@
                 <div class="service-text">
                     <h3><span>Architektura + trhání</span> <span>250 Kč</span></h3>
                     <p>Precizní vyměření ideálního tvaru obočí (tzv. brow mapping) podle rysů vašeho obličeje a následné šetrné odstranění přebytečných chloupků pomocí pinzety či vosku.</p>
+
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113643"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_OBOCI_1.jpg" alt="Architektura a trhání obočí">
+                    <img src="/pictures/archit.jpg" alt="Architektura a trhání obočí">
                 </div>
             </div>
 
@@ -125,9 +119,11 @@
                 <div class="service-text">
                     <h3><span>Architektura + trhání + barvení</span> <span>450 Kč</span></h3>
                     <p>Kompletní úprava tvaru doplněná o profesionální barvení. Barva je vybírána individuálně tak, aby ladila k vašim vlasům a tónu pleti, a dodala obočí plnější a výraznější vzhled.</p>
+
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113644"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_OBOCI_2.jpg" alt="Barvení obočí">
+                    <img src="/pictures/arch_barv.jpg" alt="Barvení obočí">
                 </div>
             </div>
 
@@ -135,29 +131,33 @@
                 <div class="service-text">
                     <h3><span>Laminace obočí (komplet)</span> <span>1100 Kč</span></h3>
                     <p>Dlouhodobá fixace chloupků do požadovaného tvaru. Ideální řešení pro neposedné, asymetrické nebo tenké obočí. Procedura opticky zvětší objem a obsahuje i barvení a hloubkovou výživu chloupků.</p>
+
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113645"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_OBOCI_3.jpg" alt="Laminace obočí">
+                    <img src="/pictures/lam_barv.jpg" alt="Laminace obočí">
                 </div>
             </div>
 
-            <div class="service-package" style="border: 2px solid var(--accent-color);">
+            <div class="service-package" style="border: 1px solid #d1ccc0;">
                 <div class="service-text">
                     <h3 class="highlight-text"><span>Balíček: Laminace + Lash Lifting</span> <span>1500 Kč</span></h3>
                     <p><strong>Nejžádanější proměna!</strong> Kompletní péče o váš pohled. Zatímco se bude fixovat a barvit vaše obočí, postaráme se i o natočení, zvýraznění a výživu vašich přírodních řas.</p>
+
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113646"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_OBOCI_4.jpg" alt="Balíček Laminace a Lash Lifting">
+                    <img src="/pictures/rasy_nahled.jpg" alt="Balíček Laminace a Lash Lifting">
                 </div>
             </div>
 
         </div>
 
-        <a href="https://booking.reservanto.cz/Modal/?id=24615" class="booking-btn" target="_blank">Rezervovat termín</a>
-
         <footer class="footer-btn">
             <span>GlowUp Lab</span>
         </footer>
     </div>
+
+    <script defer id="reservanto-widget-script" type="text/javascript" src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
 </body>
 </html>

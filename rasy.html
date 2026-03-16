@@ -91,12 +91,17 @@
             text-decoration: none;
             font-weight: 500;
             margin-top: 20px;
+            margin-bottom: 30px;
             transition: opacity 0.3s;
         }
         .booking-btn:hover { opacity: 0.8; }
         
+        .reservanto-widget {
+            margin-top: 15px;
+        }
+
         .highlight-text {
-            color: var(--accent-color);
+            color: #634a3a;
             font-weight: 600;
         }
     </style>
@@ -115,9 +120,11 @@
                 <div class="service-text">
                     <h3><span>Barvení řas</span> <span>150 Kč</span></h3>
                     <p>Zvýraznění vašich přírodních řas intenzivní barvou od kořínků až po konečky. Ideální volba pro klientky se světlými řasami, nebo jako perfektní doplněk ke kosmetickému ošetření.</p>
+
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="114082"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_RASY_1.jpg" alt="Barvení řas">
+                    <img src="/pictures/barveni.jpg" alt="Barvení řas">
                 </div>
             </div>
 
@@ -125,29 +132,37 @@
                 <div class="service-text">
                     <h3><span>Lash Lifting (komplet)</span> <span>1200 Kč</span></h3>
                     <p>Šetrná alternativa k prodlužování řas. Vaše přírodní řasy jsou natočeny od kořínků, čímž se opticky prodlouží a zahustí. Procedura zahrnuje i barvení a aplikaci výživného séra (botoxu), které řasy hydratuje a posiluje.</p>
+
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="114083"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_RASY_2.jpg" alt="Lash Lifting kompletní péče">
+                    <img src="/pictures/laminace_lash.jpg" alt="Lash Lifting kompletní péče">
                 </div>
             </div>
 
-            <div class="service-package" style="border: 2px solid var(--accent-color);">
+            <div class="service-package" style="border: 1px solid #d1ccc0;">
                 <div class="service-text">
                     <h3 class="highlight-text"><span>Balíček: Laminace + Lash Lifting</span> <span>1500 Kč</span></h3>
                     <p><strong>Doporučujeme!</strong> Kompletní proměna vašeho pohledu během jedné návštěvy. Postaráme se o dokonalý tvar vašeho obočí i natočení a výživu vašich řas za zvýhodněnou cenu.</p>
+
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113646"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="TVUJ_OBRAZEK_RASY_3.jpg" alt="Balíček Laminace obočí a Lash Lifting">
+                    <img src="/pictures/rasy_nahled.jpg" alt="Balíček Laminace obočí a Lash Lifting">
                 </div>
             </div>
 
         </div>
 
-        <a href="https://booking.reservanto.cz/Modal/?id=24615" class="booking-btn" target="_blank">Rezervovat termín</a>
+        <div style="text-align: center;">
+            <a href="https://booking.reservanto.cz/Modal/?id=24615" class="booking-btn" target="_blank">Rezervovat libovolný termín</a>
+        </div>
 
         <footer class="footer-btn">
             <span>GlowUp Lab</span>
         </footer>
     </div>
+
+    <script defer id="reservanto-widget-script" type="text/javascript" src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
 </body>
 </html>
