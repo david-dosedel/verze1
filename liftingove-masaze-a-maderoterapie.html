@@ -6,87 +6,6 @@
     <title>Liftingové masáže a maderoterapie | GlowUp Lab</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        .service-detail-content {
-            text-align: left;
-            margin-top: 30px;
-        }
-
-        /* Hlavní kontejner pro jednu službu */
-        .service-package {
-            background-color: var(--button-bg);
-            border-radius: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
-        /* Střídání obrázků (sudé vlevo, text vpravo) */
-        .service-package:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        /* Část s textem */
-        .service-text {
-            flex: 1;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .service-text h3 {
-            font-family: var(--font-serif);
-            color: #634a3a;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid #d1ccc0;
-            padding-bottom: 8px;
-            font-size: 1.25rem;
-        }
-
-        .service-text p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #4a4a4a;
-        }
-
-        /* Kontejner pro obrázek */
-        .service-img-container {
-            width: 40%;
-            position: relative;
-            min-height: 250px;
-        }
-
-        .service-img-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Mobilní zobrazení */
-        @media (max-width: 650px) {
-            .service-package, 
-            .service-package:nth-child(even) {
-                flex-direction: column-reverse;
-            }
-            .service-img-container {
-                width: 100%;
-                height: 220px;
-                min-height: auto;
-            }
-        }
-
-        /* Odsazení pro vygenerovaná tlačítka Reservanto */
-        .reservanto-widget {
-            margin-top: 15px;
-        }
-    </style>
 </head>
 <body class="cenik-page">
     <div class="container">
@@ -100,40 +19,40 @@
             
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Manuální lifting obličeje</span> <span>850 Kč</span></h3>
+                    <h3 class="price-item"><span>Manuální lifting obličeje</span> <span class="price-value">...</span></h3>
                     <p><strong>Délka: 45 minut</strong><br>
                     Intenzivní a velmi příjemná masážní technika, která uvolňuje napětí ve svalech, stimuluje krevní oběh a prokazatelně vyhlazuje drobné vrásky. Vaše pleť bude okamžitě projasněná a vypnutá.</p>
 
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113640"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="kosmetika_nahled.jpg" alt="Liftingová masáž obličeje">
+                    <img src="/pictures/kosmetika_nahled.jpg" alt="Liftingová masáž obličeje">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Maderoterapie obličeje</span> <span>950 Kč</span></h3>
+                    <h3 class="price-item"><span>Maderoterapie obličeje</span> <span class="price-value">...</span></h3>
                     <p><strong>Délka: 45 minut</strong><br>
                     Unikátní masáž pomocí speciálních dřevěných válečků. Dokonale rozproudí lymfu, zbaví obličej otoků (např. váčků pod očima) a krásně vyrýsuje kontury obličeje, včetně odstranění dvojité brady.</p>
 
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113641"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="masaze_nahled.jpg" alt="Maderoterapie obličeje">
+                    <img src="/pictures/masaze_nahled.jpg" alt="Maderoterapie obličeje">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>VIP Balíček: Lifting + Madero</span> <span>1600 Kč</span></h3>
+                    <h3 class="price-item"><span>VIP Balíček: Lifting + Madero</span> <span class="price-value">...</span></h3>
                     <p><strong>Délka: 90 minut</strong><br>
                     Ultimátní anti-aging péče. Spojení manuálních liftingových hmatů a dřevěných válečků přináší nejlepší možné výsledky v přirozeném omlazení obličeje, krku a dekoltu.</p>
 
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113642"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="kosmetika_2.jpg" alt="Kombinace Lifting a Maderoterapie">
+                    <img src="/pictures/kosmetika_2.jpg" alt="Kombinace Lifting a Maderoterapie">
                 </div>
             </div>
         </div>
@@ -144,5 +63,45 @@
     </div>
 
     <script defer id="reservanto-widget-script" type="text/javascript" src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
+    
+    <script>
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vROKBz_pua8F87e5JsElU6Fqm9kWH6anslQ_j0Gpyr2FKp42MGaF762Wtlz8PaTKkz9U5IVGC2R-caI/pub?output=csv';
+
+        async function nactiCeny() {
+            try {
+                const response = await fetch(csvUrl);
+                const data = await response.text();
+                
+                const rows = data.split('\n');
+                const ceníkData = {};
+
+                rows.forEach(row => {
+                    const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                    if (cols.length >= 2) {
+                        const nazev = cols[0].replace(/"/g, '').trim();
+                        const cena = cols[1].replace(/"/g, '').trim();
+                        ceníkData[nazev] = cena;
+                    }
+                });
+
+                const items = document.querySelectorAll('.price-item');
+                items.forEach(item => {
+                    const nazevNaWebu = item.querySelector('span:first-child').innerText.trim();
+                    const cenaSpan = item.querySelector('.price-value');
+
+                    if (ceníkData[nazevNaWebu]) {
+                        cenaSpan.innerText = ceníkData[nazevNaWebu];
+                    } else {
+                        console.warn(`Cena pro "${nazevNaWebu}" nebyla v tabulce nalezena.`);
+                    }
+                });
+
+            } catch (error) {
+                console.error("Chyba při načítání cen:", error);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', nactiCeny);
+    </script>
 </body>
 </html>

@@ -6,101 +6,6 @@
     <title>Kosmetika | GlowUp Lab</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        .service-detail-content {
-            text-align: left;
-            margin-top: 30px;
-        }
-
-        /* Hlavní kontejner pro jednu službu */
-        .service-package {
-            background-color: var(--button-bg);
-            border-radius: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Lehký stín pro hloubku */
-        }
-
-        /* Každý sudý balíček bude mít obrázek vlevo a text vpravo (střídání) */
-        .service-package:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        /* Část s textem */
-        .service-text {
-            flex: 1;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .service-text h3 {
-            font-family: var(--font-serif);
-            color: #634a3a;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid #d1ccc0;
-            padding-bottom: 8px;
-            font-size: 1.25rem;
-        }
-
-        .service-text p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #4a4a4a;
-        }
-
-        /* Kontejner pro obrázek - drží tvar */
-        .service-img-container {
-            width: 40%;
-            position: relative;
-            min-height: 250px;
-        }
-
-        /* Samotný obrázek */
-        .service-img-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Obrázek se ořízne, ale nedeformuje */
-        }
-
-        /* Zobrazení na mobilech - vše pod sebou */
-        @media (max-width: 650px) {
-            .service-package, 
-            .service-package:nth-child(even) {
-                flex-direction: column-reverse; /* Obrázek nahoře, text dole */
-            }
-            .service-img-container {
-                width: 100%;
-                height: 220px; /* Pevná výška obrázku na mobilu */
-                min-height: auto;
-            }
-        }
-
-        .booking-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 20px;
-            transition: opacity 0.3s;
-        }
-        .booking-btn:hover { opacity: 0.8; }
-        
-        /* Odsazení pro vygenerovaná tlačítka Reservanto */
-        .reservanto-widget {
-            margin-top: 15px;
-        }
-    </style>
 </head>
 <body class="cenik-page">
     <div class="container">
@@ -114,51 +19,51 @@
             
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Kosmetika Deluxe</span> <span>1500 Kč</span></h3>
+                    <h3 class="price-item"><span>Kosmetika Deluxe</span> <span class="price-value">...</span></h3>
                     <p><strong>Délka: 90 minut</strong><br>
                     Hloubkové čištění s relaxační masáží obličeje a dekoltu, maska a závěrečná péče.</p>
                     
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113636"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="kosmetika_nahled.jpg" alt="Kosmetika Deluxe">
+                    <img src="/pictures/kosmetika_nahled.jpg" alt="Kosmetika Deluxe">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Kosmetika Princess</span> <span>1750 Kč</span></h3>
+                    <h3 class="price-item"><span>Kosmetika Princess</span> <span class="price-value">...</span></h3>
                     <p>Rozšířená péče se zapracováním aktivních sér a speciální alginátovou maskou pro rozjasnění.</p>
                         
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113637"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="kosmetika_2.jpg" alt="Kosmetika Princess">
+                    <img src="/pictures/kosmetika_2.jpg" alt="Kosmetika Princess">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Kosmetika Queen</span> <span>1850 Kč</span></h3>
+                    <h3 class="price-item"><span>Kosmetika Queen</span> <span class="price-value">...</span></h3>
                     <p>VIP péče s anti-aging procedurami a prodlouženou liftingovou masáží pro dokonalý relax.</p>
                     
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113638"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="masaze_nahled.jpg" alt="Kosmetika Queen">
+                    <img src="/pictures/masaze_nahled.jpg" alt="Kosmetika Queen">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Kosmetika Student</span> <span>1000 Kč</span></h3>
+                    <h3 class="price-item"><span>Kosmetika Student</span> <span class="price-value">...</span></h3>
                     <p><strong>Délka: 60 minut</strong><br>
                     Rychlé a efektivní hloubkové čištění přizpůsobené mladé a problematické pleti.</p>
                     
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113639"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="kosmetika_nahled.jpg" alt="Kosmetika Student">
+                    <img src="/pictures/kosmetika_nahled.jpg" alt="Kosmetika Student">
                 </div>
             </div>
 
@@ -174,5 +79,47 @@
     </div>
 
     <script defer id="reservanto-widget-script" type="text/javascript" src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
+    <script>
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vROKBz_pua8F87e5JsElU6Fqm9kWH6anslQ_j0Gpyr2FKp42MGaF762Wtlz8PaTKkz9U5IVGC2R-caI/pub?output=csv';
+
+        async function nactiCeny() {
+            try {
+                const response = await fetch(csvUrl);
+                const data = await response.text();
+                
+                // Zpracování CSV řádků
+                const rows = data.split('\n');
+                const ceníkData = {};
+
+                rows.forEach(row => {
+                    // Ošetření uvozovek a čárek v CSV
+                    const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                    if (cols.length >= 2) {
+                        const nazev = cols[0].replace(/"/g, '').trim();
+                        const cena = cols[1].replace(/"/g, '').trim();
+                        ceníkData[nazev] = cena;
+                    }
+                });
+
+                // Projdeme všechny položky na webu
+                const items = document.querySelectorAll('.price-item');
+                items.forEach(item => {
+                    const nazevNaWebu = item.querySelector('span:first-child').innerText.trim();
+                    const cenaSpan = item.querySelector('.price-value');
+
+                    // Pokud název v tabulce odpovídá názvu na webu, přepíšeme cenu
+                    if (ceníkData[nazevNaWebu]) {
+                        cenaSpan.innerText = ceníkData[nazevNaWebu];
+                    }
+                });
+
+            } catch (error) {
+                console.error("Chyba při načítání cen:", error);
+            }
+        }
+
+        // Spustit funkci po načtení stránky
+        window.addEventListener('DOMContentLoaded', nactiCeny);
+    </script>
 </body>
 </html>

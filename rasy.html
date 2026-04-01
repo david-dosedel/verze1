@@ -6,105 +6,6 @@
     <title>Úprava řas | GlowUp Lab</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        .service-detail-content {
-            text-align: left;
-            margin-top: 30px;
-        }
-
-        /* Hlavní kontejner pro jednu službu */
-        .service-package {
-            background-color: var(--button-bg);
-            border-radius: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
-        /* Střídání obrázků (sudé vlevo, text vpravo) */
-        .service-package:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        /* Část s textem */
-        .service-text {
-            flex: 1;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .service-text h3 {
-            font-family: var(--font-serif);
-            color: #634a3a;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid #d1ccc0;
-            padding-bottom: 8px;
-            font-size: 1.25rem;
-        }
-
-        .service-text p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #4a4a4a;
-        }
-
-        /* Kontejner pro obrázek */
-        .service-img-container {
-            width: 40%;
-            position: relative;
-            min-height: 250px;
-        }
-
-        .service-img-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Mobilní zobrazení */
-        @media (max-width: 650px) {
-            .service-package, 
-            .service-package:nth-child(even) {
-                flex-direction: column-reverse;
-            }
-            .service-img-container {
-                width: 100%;
-                height: 220px;
-                min-height: auto;
-            }
-        }
-
-        .booking-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            transition: opacity 0.3s;
-        }
-        .booking-btn:hover { opacity: 0.8; }
-        
-        .reservanto-widget {
-            margin-top: 15px;
-        }
-
-        .highlight-text {
-            color: #634a3a;
-            font-weight: 600;
-        }
-    </style>
 </head>
 <body class="cenik-page">
     <div class="container">
@@ -118,37 +19,37 @@
             
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Barvení řas</span> <span>150 Kč</span></h3>
+                    <h3 class="price-item"><span>Barvení řas</span> <span class="price-value">...</span></h3>
                     <p>Zvýraznění vašich přírodních řas intenzivní barvou od kořínků až po konečky. Ideální volba pro klientky se světlými řasami, nebo jako perfektní doplněk ke kosmetickému ošetření.</p>
 
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="114082"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="barveni.jpg" alt="Barvení řas">
+                    <img src="/pictures/barveni.jpg" alt="Barvení řas">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Lash Lifting (komplet)</span> <span>1200 Kč</span></h3>
+                    <h3 class="price-item"><span>Lash Lifting (komplet)</span> <span class="price-value">...</span></h3>
                     <p>Šetrná alternativa k prodlužování řas. Vaše přírodní řasy jsou natočeny od kořínků, čímž se opticky prodlouží a zahustí. Procedura zahrnuje i barvení a aplikaci výživného séra (botoxu), které řasy hydratuje a posiluje.</p>
 
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="114083"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="laminace_lash.jpg" alt="Lash Lifting kompletní péče">
+                    <img src="/pictures/laminace_lash.jpg" alt="Lash Lifting kompletní péče">
                 </div>
             </div>
 
             <div class="service-package" style="border: 1px solid #d1ccc0;">
                 <div class="service-text">
-                    <h3 class="highlight-text"><span>Balíček: Laminace + Lash Lifting</span> <span>1500 Kč</span></h3>
+                    <h3 class="highlight-text price-item"><span>Balíček: Laminace + Lash Lifting</span> <span class="price-value">...</span></h3>
                     <p><strong>Doporučujeme!</strong> Kompletní proměna vašeho pohledu během jedné návštěvy. Postaráme se o dokonalý tvar vašeho obočí i natočení a výživu vašich řas za zvýhodněnou cenu.</p>
 
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113646"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="rasy_nahled.jpg" alt="Balíček Laminace obočí a Lash Lifting">
+                    <img src="/pictures/rasy_nahled.jpg" alt="Balíček Laminace obočí a Lash Lifting">
                 </div>
             </div>
 
@@ -164,5 +65,45 @@
     </div>
 
     <script defer id="reservanto-widget-script" type="text/javascript" src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
+    
+    <script>
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vROKBz_pua8F87e5JsElU6Fqm9kWH6anslQ_j0Gpyr2FKp42MGaF762Wtlz8PaTKkz9U5IVGC2R-caI/pub?output=csv';
+
+        async function nactiCeny() {
+            try {
+                const response = await fetch(csvUrl);
+                const data = await response.text();
+                
+                const rows = data.split('\n');
+                const ceníkData = {};
+
+                rows.forEach(row => {
+                    const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                    if (cols.length >= 2) {
+                        const nazev = cols[0].replace(/"/g, '').trim();
+                        const cena = cols[1].replace(/"/g, '').trim();
+                        ceníkData[nazev] = cena;
+                    }
+                });
+
+                const items = document.querySelectorAll('.price-item');
+                items.forEach(item => {
+                    const nazevNaWebu = item.querySelector('span:first-child').innerText.trim();
+                    const cenaSpan = item.querySelector('.price-value');
+
+                    if (ceníkData[nazevNaWebu]) {
+                        cenaSpan.innerText = ceníkData[nazevNaWebu];
+                    } else {
+                        console.warn(`Cena pro "${nazevNaWebu}" nebyla v tabulce nalezena.`);
+                    }
+                });
+
+            } catch (error) {
+                console.error("Chyba při načítání cen:", error);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', nactiCeny);
+    </script>
 </body>
 </html>

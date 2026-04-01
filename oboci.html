@@ -6,148 +6,66 @@
     <title>Úprava obočí | GlowUp Lab</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        .service-detail-content {
-            text-align: left;
-            margin-top: 30px;
-        }
-
-        /* Hlavní kontejner pro jednu službu */
-        .service-package {
-            background-color: var(--button-bg);
-            border-radius: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
-        /* Střídání obrázků (sudé vlevo, text vpravo) */
-        .service-package:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        /* Část s textem */
-        .service-text {
-            flex: 1;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .service-text h3 {
-            font-family: var(--font-serif);
-            color: #634a3a;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid #d1ccc0;
-            padding-bottom: 8px;
-            font-size: 1.25rem;
-        }
-
-        .service-text p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #4a4a4a;
-        }
-
-        /* Kontejner pro obrázek */
-        .service-img-container {
-            width: 40%;
-            position: relative;
-            min-height: 250px;
-        }
-
-        .service-img-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Mobilní zobrazení */
-        @media (max-width: 650px) {
-            .service-package, 
-            .service-package:nth-child(even) {
-                flex-direction: column-reverse;
-            }
-            .service-img-container {
-                width: 100%;
-                height: 220px;
-                min-height: auto;
-            }
-        }
-
-        /* Odsazení pro vygenerovaná tlačítka Reservanto */
-        .reservanto-widget {
-            margin-top: 15px;
-        }
-
-        .highlight-text {
-            color: #634a3a; /* Sjednoceno s ostatními nadpisy */
-            font-weight: 600;
-        }
-    </style>
+    
 </head>
 <body class="cenik-page">
     <div class="container">
-        <header class="profile">
-            <a href="sluzby.html" class="back-btn">← Zpět na služby</a>
-            <h1>Architektura a úprava obočí</h1>
-            <p class="subtitle">Dokonalý tvar a barva pro podtržení vašeho přirozeného pohledu.</p>
+        <header class="profile" style="text-align: center; padding: 40px 0;">
+            <a href="sluzby.html" class="back-btn" style="text-decoration: none; color: #634a3a;">← Zpět na služby</a>
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-top: 15px;">Architektura a úprava obočí</h1>
         </header>
 
         <div class="service-detail-content">
             
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Architektura + trhání</span> <span>250 Kč</span></h3>
-                    <p>Precizní vyměření ideálního tvaru obočí (tzv. brow mapping) podle rysů vašeho obličeje a následné šetrné odstranění přebytečných chloupků pomocí pinzety či vosku.</p>
-
-                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113643"></div>
+                    <h3 class="price-item">
+                        <span>Architektura + trhání</span> 
+                        <span class="price-value">...</span> </h3>
+                    <p>Precizní vyměření ideálního tvaru obočí podle rysů vašeho obličeje a následné šetrné odstranění chloupků.</p>
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-segment="3" data-resourceid="43644" data-serviceid="113643" data-color-bg="#634a3a"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="archit.jpg" alt="Architektura a trhání obočí">
+                    <img src="/pictures/archit.jpg" alt="Architektura a trhání obočí">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Architektura + trhání + barvení</span> <span>450 Kč</span></h3>
-                    <p>Kompletní úprava tvaru doplněná o profesionální barvení. Barva je vybírána individuálně tak, aby ladila k vašim vlasům a tónu pleti, a dodala obočí plnější a výraznější vzhled.</p>
-
-                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113644"></div>
+                    <h3 class="price-item">
+                        <span>Architektura + trhání + barvení</span> 
+                        <span class="price-value">...</span> </h3>
+                    <p>Kompletní úprava tvaru doplněná o profesionální barvení pro plnější a výraznější vzhled.</p>
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-segment="3" data-resourceid="43644" data-serviceid="113644" data-color-bg="#634a3a"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="arch_barv.jpg" alt="Barvení obočí">
+                    <img src="/pictures/arch_barv.jpg" alt="Barvení obočí">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Laminace obočí (komplet)</span> <span>1100 Kč</span></h3>
-                    <p>Dlouhodobá fixace chloupků do požadovaného tvaru. Ideální řešení pro neposedné, asymetrické nebo tenké obočí. Procedura opticky zvětší objem a obsahuje i barvení a hloubkovou výživu chloupků.</p>
-
-                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113645"></div>
+                    <h3 class="price-item">
+                        <span>Laminace obočí (komplet)</span> 
+                        <span class="price-value">...</span> </h3>
+                    <p>Dlouhodobá fixace chloupků do požadovaného tvaru. Obsahuje barvení a hloubkovou výživu.</p>
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-segment="3" data-resourceid="43644" data-serviceid="113645" data-color-bg="#634a3a"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="lam_barv.jpg" alt="Laminace obočí">
+                    <img src="/pictures/lam_barv.jpg" alt="Laminace obočí">
                 </div>
             </div>
 
-            <div class="service-package" style="border: 1px solid #d1ccc0;">
+            <div class="service-package featured-package">
                 <div class="service-text">
-                    <h3 class="highlight-text"><span>Balíček: Laminace + Lash Lifting</span> <span>1500 Kč</span></h3>
-                    <p><strong>Nejžádanější proměna!</strong> Kompletní péče o váš pohled. Zatímco se bude fixovat a barvit vaše obočí, postaráme se i o natočení, zvýraznění a výživu vašich přírodních řas.</p>
-
-                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="113646"></div>
+                    <h3 class="price-item">
+                        <span>Balíček: Laminace + Lash Lifting</span> 
+                        <span class="price-value">...</span> </h3>
+                    <p><strong>Nejžádanější proměna!</strong> Kompletní péče o váš pohled. Natočení řas a fixace obočí v jednom kroku.</p>
+                    <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-segment="3" data-resourceid="43644" data-serviceid="113646" data-color-bg="#634a3a"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="rasy_nahled.jpg" alt="Balíček Laminace a Lash Lifting">
+                    <img src="/pictures/rasy_nahled.jpg" alt="Balíček Laminace a Lash Lifting">
                 </div>
             </div>
 
@@ -158,6 +76,46 @@
         </footer>
     </div>
 
-    <script defer id="reservanto-widget-script" type="text/javascript" src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
+    <script defer src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
+    
+    <script>
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vROKBz_pua8F87e5JsElU6Fqm9kWH6anslQ_j0Gpyr2FKp42MGaF762Wtlz8PaTKkz9U5IVGC2R-caI/pub?output=csv';
+
+        async function nactiCeny() {
+            try {
+                const response = await fetch(csvUrl);
+                const data = await response.text();
+                
+                const rows = data.split('\n');
+                const ceníkData = {};
+
+                rows.forEach(row => {
+                    const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                    if (cols.length >= 2) {
+                        const nazev = cols[0].replace(/"/g, '').trim();
+                        const cena = cols[1].replace(/"/g, '').trim();
+                        ceníkData[nazev] = cena;
+                    }
+                });
+
+                const items = document.querySelectorAll('.price-item');
+                items.forEach(item => {
+                    const nazevNaWebu = item.querySelector('span:first-child').innerText.trim();
+                    const cenaSpan = item.querySelector('.price-value');
+
+                    if (ceníkData[nazevNaWebu]) {
+                        cenaSpan.innerText = ceníkData[nazevNaWebu];
+                    } else {
+                        console.warn(`Cena pro "${nazevNaWebu}" nebyla v tabulce nalezena.`);
+                    }
+                });
+
+            } catch (error) {
+                console.error("Chyba při načítání cen:", error);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', nactiCeny);
+    </script>
 </body>
 </html>

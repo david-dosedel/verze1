@@ -6,111 +6,6 @@
     <title>Profesionální líčení | GlowUp Lab</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        .service-detail-content {
-            text-align: left;
-            margin-top: 30px;
-        }
-
-        /* Hlavní kontejner pro jednu službu */
-        .service-package {
-            background-color: var(--button-bg);
-            border-radius: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
-        /* Střídání obrázků (sudé vlevo, text vpravo) */
-        .service-package:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        /* Část s textem */
-        .service-text {
-            flex: 1;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .service-text h3 {
-            font-family: var(--font-serif);
-            color: #634a3a;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid #d1ccc0;
-            padding-bottom: 8px;
-            font-size: 1.25rem;
-        }
-
-        .service-text p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #4a4a4a;
-        }
-
-        /* Kontejner pro obrázek */
-        .service-img-container {
-            width: 40%;
-            position: relative;
-            min-height: 250px;
-        }
-
-        .service-img-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Mobilní zobrazení */
-        @media (max-width: 650px) {
-            .service-package, 
-            .service-package:nth-child(even) {
-                flex-direction: column-reverse;
-            }
-            .service-img-container {
-                width: 100%;
-                height: 220px;
-                min-height: auto;
-            }
-        }
-
-        .booking-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            transition: opacity 0.3s;
-        }
-        .booking-btn:hover { opacity: 0.8; }
-
-        .reservanto-widget {
-            margin-top: 15px;
-        }
-
-        .wedding-note {
-            background-color: var(--button-bg); /* Použití vaší proměnné pro barvu pozadí */
-            padding: 25px;
-            border-radius: 20px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border: 1px dashed #d1ccc0;
-            text-align: center;
-            color: #4a4a4a;
-        }
-    </style>
 </head>
 <body class="cenik-page">
     <div class="container">
@@ -124,33 +19,33 @@
             
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Společenský make-up</span> <span>1500–2000 Kč</span></h3>
+                    <h3 class="price-item"><span>Společenský make-up</span> <span class="price-value">...</span></h3>
                     <p>Líčení na ples, večírek, oslavu nebo rodinné focení. Používám profesionální a dlouhotrvající produkty, které vydrží v perfektním stavu po celou noc. Součástí je i aplikace trsů řas pro zvýraznění pohledu.</p>
 
                     <div class="reservanto-widget" data-text="Rezervovat" data-id="24615" data-color-text="#ffffff" data-color-text-shadow="#634a3a" data-color-bg="#634a3a" data-color-bg-hover="#7a5c48" data-color-boxshadow="#4a372b" data-segment="3" data-resourceid="43644" data-serviceid="114085"></div>
                 </div>
                 <div class="service-img-container">
-                    <img src="liceni_nahled.jpg" alt="Společenský make-up">
+                    <img src="/pictures/liceni_nahled.jpg" alt="Společenský make-up">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Svatební líčení</span> <span>na dotaz</span></h3>
+                    <h3 class="price-item"><span>Svatební líčení</span> <span class="price-value">...</span></h3>
                     <p>Líčení nevěsty, které musí být dokonalé naživo i na fotografii. Balíček obvykle obsahuje zkoušku líčení, poradenství v péči o pleť před svatbou a líčení v den D u mě v salonu nebo u vás na místě.</p>
                 </div>
                 <div class="service-img-container">
-                    <img src="svatebni.jpg" alt="Svatební líčení">
+                    <img src="/pictures/svatebni.jpg" alt="Svatební líčení">
                 </div>
             </div>
 
             <div class="service-package">
                 <div class="service-text">
-                    <h3><span>Kurz sebelíčení</span> <span>individuálně</span></h3>
+                    <h3 class="price-item"><span>Kurz sebelíčení</span> <span class="price-value">...</span></h3>
                     <p>Naučte se líčit jako profesionál. Během individuálního kurzu projdeme váš kosmetický kufřík, vybereme ideální odstíny pro váš typ a naučím vás techniky, které vám ráno ušetří čas a dodají sebevědomí.</p>
                 </div>
                 <div class="service-img-container">
-                    <img src="kurzy_1.jpg" alt="Kurz sebelíčení">
+                    <img src="/pictures/kurzy_1.jpg" alt="Kurz sebelíčení">
                 </div>
             </div>
 
@@ -165,5 +60,45 @@
     </div>
 
     <script defer id="reservanto-widget-script" type="text/javascript" src="https://booking.reservanto.cz/Script/reservanto-script.js?id=24615"></script>
+
+    <script>
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vROKBz_pua8F87e5JsElU6Fqm9kWH6anslQ_j0Gpyr2FKp42MGaF762Wtlz8PaTKkz9U5IVGC2R-caI/pub?output=csv';
+
+        async function nactiCeny() {
+            try {
+                const response = await fetch(csvUrl);
+                const data = await response.text();
+                
+                const rows = data.split('\n');
+                const ceníkData = {};
+
+                rows.forEach(row => {
+                    const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                    if (cols.length >= 2) {
+                        const nazev = cols[0].replace(/"/g, '').trim();
+                        const cena = cols[1].replace(/"/g, '').trim();
+                        ceníkData[nazev] = cena;
+                    }
+                });
+
+                const items = document.querySelectorAll('.price-item');
+                items.forEach(item => {
+                    const nazevNaWebu = item.querySelector('span:first-child').innerText.trim();
+                    const cenaSpan = item.querySelector('.price-value');
+
+                    if (ceníkData[nazevNaWebu]) {
+                        cenaSpan.innerText = ceníkData[nazevNaWebu];
+                    } else {
+                        console.warn(`Cena pro "${nazevNaWebu}" nebyla v tabulce nalezena.`);
+                    }
+                });
+
+            } catch (error) {
+                console.error("Chyba při načítání cen:", error);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', nactiCeny);
+    </script>
 </body>
 </html>
