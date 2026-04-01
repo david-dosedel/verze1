@@ -6,6 +6,10 @@
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
     --accent-color: #8c7365; /* Hnědý akcent pro ceník */
+    --primary-color: #634a3a;
+    --secondary-color: #d1ccc0;
+    --text-dark: #4a4a4a;
+    --bg-light: #fdfaf8;
 }
 
 * {
@@ -29,7 +33,7 @@ body {
     text-align: center;
 }
 
-/* --- PROFIL (HLAVNÍ STRÁNKA) --- */
+/* --- PROFIL (HLAVNÍ STRÁNKA A O MNĚ) --- */
 .profile-pic img {
     width: 120px;
     height: 120px;
@@ -42,11 +46,13 @@ h1 {
     font-family: var(--font-serif);
     font-size: 2rem;
     margin-bottom: 8px;
+    color: var(--primary-color);
 }
 
 .subtitle {
     font-size: 1rem;
     margin-bottom: 25px;
+    color: var(--text-dark);
 }
 
 /* --- IKONY SOCIÁLNÍCH SÍTÍ --- */
@@ -85,6 +91,7 @@ h1 {
     border-radius: 40px;
     transition: transform 0.2s ease;
     position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
 .link-card:hover {
@@ -118,31 +125,25 @@ h1 {
     font-size: 1.2rem;
 }
 
-/* --- SEKCE SLUŽBY (GRID STYL) --- */
-/* --- SEKCE SLUŽBY (GRID STYL - 3 SLOUPCE) --- */
+/* --- SEKCE SLUŽBY ROZCESTNÍK (GRID STYL) --- */
 .services-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Mobil: 1 sloupec */
-    gap: 15px; /* Mírně menší mezera, aby se 3 vešly lépe */
+    grid-template-columns: 1fr;
+    gap: 15px;
     margin-top: 20px;
     width: 100%;
 }
 
-/* Tablet: 2 sloupce */
 @media (min-width: 600px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Desktop: 3 sloupce */
 @media (min-width: 900px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
-    /* Na desktopu můžeme i mírně zvětšit max-width kontejneru, 
-       aby dlaždice nebyly příliš úzké */
     .container {
         max-width: 900px; 
     }
@@ -150,7 +151,7 @@ h1 {
 
 .service-item {
     position: relative;
-    height: 350px; /* Můžeš zmenšit na 300px, pokud jsou karty moc vysoké */
+    height: 300px;
     border-radius: 25px;
     overflow: hidden;
     display: block;
@@ -193,16 +194,115 @@ h1 {
     padding-bottom: 5px;
 }
 
-/* --- STYLY PRO CENÍK --- */
+/* --- DETAILY SLUŽEB A BALÍČKY --- */
+.service-detail-content {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.service-package {
+    background-color: var(--button-bg);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.service-package:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.featured-package {
+    border: 1px solid var(--primary-color);
+    background-color: var(--bg-light);
+}
+
+.service-text {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-text h3 {
+    font-family: var(--font-serif);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+.service-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.service-img-container {
+    width: 40%;
+    position: relative;
+    min-height: 250px;
+}
+
+.service-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- TLAČÍTKA A WIDGETY --- */
 .back-btn {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--primary-color);
     font-size: 0.9rem;
     display: inline-block;
     margin-bottom: 20px;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
+.booking-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: opacity 0.3s;
+}
+
+.booking-btn:hover {
+    opacity: 0.8;
+}
+
+.reservanto-widget {
+    margin-top: 15px;
+}
+
+/* --- INFORMAČNÍ BOXY --- */
+.info-note, .wedding-note {
+    background-color: #f4f0e6;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: 1px dashed var(--accent-color);
+    text-align: center;
+    color: var(--text-dark);
+}
+
+/* --- STYLY PRO CENÍK A PRODUKTY --- */
 .price-section {
     margin-bottom: 40px;
     text-align: left;
@@ -211,10 +311,10 @@ h1 {
 .price-section h2 {
     font-family: var(--font-serif);
     font-size: 1.5rem;
-    border-bottom: 1px solid #d1ccc0;
+    border-bottom: 1px solid var(--secondary-color);
     padding-bottom: 10px;
     margin-bottom: 15px;
-    color: #634a3a;
+    color: var(--primary-color);
 }
 
 .price-item {
@@ -235,6 +335,7 @@ h1 {
 
 .price-item span:first-child { order: 1; }
 .price-item span:last-child { order: 3; font-weight: 500; }
+.price-item .price-value { white-space: nowrap; margin-left: 10px; color: var(--primary-color); }
 
 .price-item.highlight {
     font-weight: 700;
@@ -248,6 +349,105 @@ h1 {
     margin-top: 5px;
 }
 
+.order-text {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.highlight-text {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* --- STRÁNKA O MNĚ --- */
+.about-content {
+    background-color: var(--button-bg);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    
+    /* Změna na grid pro rozložení vedle sebe */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dva sloupce */
+    gap: 40px; /* Mezera mezi obrázkem a textem */
+    align-items: center; /* Vertikální zarovnání na střed */
+}
+
+.about-text-content {
+    text-align: left; /* Text uvnitř gridu zarovnán doleva */
+}
+
+.about-text-content p {
+    margin-bottom: 15px;
+}
+
+.about-text-content ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text-content li {
+    margin-bottom: 8px;
+}
+
+.about-signature {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about-image {
+    width: 100%;
+    max-height: 650px; /* Zvětšená výška podle tvého přání */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* --- RESPONZIVITA (MOBILY A TABLETY) --- */
+@media (max-width: 768px) {
+    /* Úprava balíčků služeb */
+    .service-package, 
+    .service-package:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    
+    .service-img-container {
+        width: 100%;
+        height: 220px;
+        min-height: auto;
+    }
+    
+    .service-text { 
+        padding: 25px; 
+    }
+
+    /* Úprava stránky O mně na mobilu */
+    .about-content {
+        grid-template-columns: 1fr; /* Jeden sloupec */
+        gap: 20px;
+        text-align: center;
+    }
+
+    .about-image {
+        max-height: 350px; /* Menší výška obrázku na mobilu */
+    }
+    
+    .about-text-content {
+        text-align: center;
+    }
+    
+    .about-text-content ul {
+        text-align: left; /* Seznam nechat vlevo, aby byl čitelný */
+        display: inline-block; /* Vycentrovat celý blok seznamu */
+    }
+}
+
 /* --- PATIČKA --- */
 .footer-btn {
     margin-top: 50px;
@@ -256,4 +456,6 @@ h1 {
     letter-spacing: 1px;
     text-transform: uppercase;
     padding-bottom: 20px;
+    font-family: var(--font-sans);
+    text-align: center;
 }
