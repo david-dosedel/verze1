@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | GlowUp Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .portfolio-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 15px;
+            grid-auto-flow: dense;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        @media (min-width: 768px) {
+            .gallery-item.tall {
+                grid-row: span 2;
+            }
+            .gallery-item.wide {
+                grid-column: span 2;
+            }
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Zpět na hlavní stránku
+        </a>
+
+        <section class="gallery-section">
+            <div class="section-title">
+                <h2>Moje práce</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item wide">
+                    <img src="pictures/arch_barv.jpg" alt="Architektura a barvení obočí - před a po">
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="pictures/archit.png" alt="Architektura obočí">
+                </div>
+                <div class="gallery-item">
+                    <img src="pictures/lam_barv.png" alt="Laminace a barvení obočí">
+                </div>
+                <div class="gallery-item">
+                    <img src="pictures/laminace_lash.jpg" alt="Laminace řas">
+                </div>
+                <div class="gallery-item">
+                    <img src="pictures/rasy_nahled.jpg" alt="Úprava řas">
+                </div>
+
+                <div class="gallery-item tall">
+                    <img src="pictures/barveni.jpg" alt="Detail barvení řas">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="pictures/liceni_nahled.jpg" alt="Profesionální líčení">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="pictures/kulmovani_styling_1.jpg" alt="Styling vlasů - varianta 1">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="pictures/kulmovani_styling_2.jpg" alt="Styling vlasů - varianta 2">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="pictures/uces_svatebni.jpg" alt="Svatební účes">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="pictures/ucesy_nahled.jpg" alt="Svatební účes">
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer" style="text-align: center; padding-top: 60px;">
+            <p class="footer-btn">Created by David Doseděl</p>
+        </footer>
+
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        document.querySelectorAll('.gallery-item img').forEach(image => {
+            image.onclick = () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = image.src;
+                document.body.style.overflow = 'hidden';
+            };
+        });
+
+        lightbox.onclick = (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+        closeBtn.onclick = () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+    </script>
+
+</body>
+</html>
